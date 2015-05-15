@@ -27,6 +27,7 @@ public class Board
         return colCount;
     }
 
+    //Clears the entire board
     public void clearBoard()
     {
         if (boardGrids != null)
@@ -41,6 +42,7 @@ public class Board
         }
     }
 
+    //Prints out the board
     public void drawBoard()
     {
         if (boardGrids != null)

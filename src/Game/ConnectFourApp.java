@@ -2,6 +2,7 @@ package Game;
 import java.util.*;
 import java.io.*;
 
+//Console based game
 public class ConnectFourApp {
     static int colMove;
     public static void main(String [] args) throws Exception{
