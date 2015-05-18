@@ -41,19 +41,28 @@ public class BasePlayer
         losses=0;
     }
 
-    //Returns player name
+    /**
+     *
+     * @return Returns player name
+     */
     public String getName()
     {
         return name;
     }
 
-    //Returns number of wins
+    /**
+     *
+     * @return number of wins
+     */
     public int getWins()
     {
         return wins;
     }
 
-    //Returns number of losses
+    /**
+     *
+     * @return number of losses
+     */
     public int getLosses()
     {
         return losses;

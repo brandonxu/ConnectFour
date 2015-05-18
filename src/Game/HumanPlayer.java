@@ -9,6 +9,7 @@ public class HumanPlayer extends BasePlayer
         super(name);
     }
 
+    //Drops a chip in to a column
     public int move(Board board, int col, String openPositionChar)
     {
         int i = 0;
@@ -28,6 +29,7 @@ public class HumanPlayer extends BasePlayer
         return i;
     }
 
+    //Returns the character of the player
     public String getCharacterOnBoard()
     {
         return characterOnBoard;

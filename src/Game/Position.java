@@ -1,6 +1,8 @@
 package Game;
 public class Position
 {
+    //This class holds the row and column
+
     private int column;
     private int row;
 

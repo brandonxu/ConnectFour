@@ -3,9 +3,11 @@ import java.util.*;
 import java.io.*;
 
 //Console based game
-public class ConnectFourApp {
+public class ConnectFourApp
+{
     static int colMove;
-    public static void main(String [] args) throws Exception{
+    public static void main(String [] args) throws Exception
+    {
         Scanner input = new Scanner(System.in);
         String name;
         String goAgain;
@@ -27,8 +29,11 @@ public class ConnectFourApp {
             fr.close();
         }
 
+        //Reads in user's name
         System.out.print("Enter your name: ");
         name = input.next();
+
+        //User selects difficulty
         int difficulty;
         do
         {
@@ -99,6 +104,7 @@ public class ConnectFourApp {
             goAgain = input.next();
         }while(goAgain.equalsIgnoreCase("Y"));
 
+        //Adds the game statistics to the file
         Date dt = new Date();
         String result = String.format("\n%25s won %d     %25s won %d     %25s\n", computerPlayer.getName(), computerPlayer.getWins(), humanPlayer.getName(), humanPlayer.getWins(), dt);
         FileWriter fw = new FileWriter("Result.rtf", true);
@@ -106,5 +112,4 @@ public class ConnectFourApp {
         fw.close();
         System.out.println(game.getHumanPlayer().getName() + " you won " +  game.getHumanPlayer().getWins() + " games.");
     }
-
 }

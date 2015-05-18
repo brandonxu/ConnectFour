@@ -17,11 +17,13 @@ public class Board
         clearBoard();
     }
 
+    //Returns number of rows
     public int getRowCount()
     {
         return rowCount;
     }
 
+    //Returns number of columns
     public int getColCount()
     {
         return colCount;
@@ -90,6 +92,7 @@ public class Board
         return false;
     }
 
+    //Returns if board is filled or not
     public boolean isBoardFilled()
     {
         boolean isBoardfilled = true;
@@ -107,7 +110,7 @@ public class Board
         return isBoardfilled;
     }
 
-
+    //Checks for winner
     public boolean checkForWinner(String player)
     {
         for (int i = 0; i < rowCount; i++)
@@ -266,6 +269,7 @@ public class Board
         return false;
     }
 
+    //Check if a spot if filled with certain character
     public boolean isGridFilledWith(int row, int col, String aChar)
     {
         if (row <0 || row >= rowCount)
@@ -288,6 +292,7 @@ public class Board
         }
     }
 
+    //Fills the specified spot with a character
     public void fillGrid(int row, int col, String aChar)
     {
         if (row <0 || row >= rowCount)

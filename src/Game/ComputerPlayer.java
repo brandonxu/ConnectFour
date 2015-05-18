@@ -9,8 +9,19 @@ public  abstract class ComputerPlayer extends BasePlayer
         characterOnBoard = "X";
     }
 
+    /**
+     *
+     * @param board
+     * @param openSpots
+     * @param opponent
+     * @return
+     */
     public abstract Position move(Board board, String openSpots, String opponent);
 
+    /**
+     * 
+     * @return
+     */
     public String getCharacterOnBoard()
     {
         return characterOnBoard;

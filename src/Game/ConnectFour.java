@@ -2,7 +2,6 @@ package Game;
 
 public class ConnectFour
 {
-
     private static final int NUM_COLS = 7;
     private static final int NUM_ROWS = 6;
     private static String openPositionChar = " ";
