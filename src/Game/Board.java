@@ -74,7 +74,12 @@ public class Board
         System.out.println("\n");
     }
 
-    public boolean validMove(int possibleCol)
+    /**
+     * //determine if this drop is valid or not – dropping to a full column is invalid
+     * @param possibleCol
+     * @return
+     */
+    public boolean IsDropValid(int possibleCol)
     {
         if (possibleCol<0 || possibleCol >= colCount)
         {
@@ -93,7 +98,7 @@ public class Board
     }
 
     //Returns if board is filled or not
-    public boolean isBoardFilled()
+    public boolean isBoardFullyFilled()
     {
         boolean isBoardfilled = true;
         for (int i=0; i<rowCount; i++)
@@ -270,7 +275,7 @@ public class Board
     }
 
     //Check if a spot if filled with certain character
-    public boolean isGridFilledWith(int row, int col, String aChar)
+    public boolean isCellFilledWith(int row, int col, String aChar)
     {
         if (row <0 || row >= rowCount)
         {
@@ -293,7 +298,7 @@ public class Board
     }
 
     //Fills the specified spot with a character
-    public void fillGrid(int row, int col, String aChar)
+    public void DropDisc(int row, int col, String aChar)
     {
         if (row <0 || row >= rowCount)
         {

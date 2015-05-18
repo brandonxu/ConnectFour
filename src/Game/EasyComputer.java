@@ -22,9 +22,9 @@ public class EasyComputer extends ComputerPlayer
 
                 for(i = board.getRowCount() - 1; i >= 0; i--)
                 {
-                    if(board.isGridFilledWith(i, randomColumn, openPosition))
+                    if(board.isCellFilledWith(i, randomColumn, openPosition))
                     {
-                        board.fillGrid(i, randomColumn, getCharacterOnBoard());
+                        board.DropDisc(i, randomColumn, getCharacterOnBoard());
                         moved = true;
                         position.setColumn(randomColumn);
                         position.setRow(i);

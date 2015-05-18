@@ -13,11 +13,11 @@ public class HardComputer extends ComputerPlayer
         int rowCount = board.getRowCount();
         for (int i = rowCount -1; i>=0; i--)
         {
-            if (board.isGridFilledWith(i, col, openPositionChar))
+            if (board.isCellFilledWith(i, col, openPositionChar))
             {
                 position.setColumn(col);
                 position.setRow(i);
-                board.fillGrid(i, col, this.getCharacterOnBoard());
+                board.DropDisc(i, col, this.getCharacterOnBoard());
                 break;
             }
         }
@@ -37,7 +37,7 @@ public class HardComputer extends ComputerPlayer
             int continuousMoveCount = 0;
             for (int j = 0; j < colCount; j++)
             {
-                if (board.isGridFilledWith(i, j, opponentCharacterOnBoard))
+                if (board.isCellFilledWith(i, j, opponentCharacterOnBoard))
                 {
                     continuousMoveCount ++;
                 }
@@ -49,17 +49,17 @@ public class HardComputer extends ComputerPlayer
                 if (continuousMoveCount == 3)
                 {
                     int possibleRightCol = j + 1;
-                    if (possibleRightCol < colCount && board.isGridFilledWith(i, possibleRightCol, openPositionChar))
+                    if (possibleRightCol < colCount && board.isCellFilledWith(i, possibleRightCol, openPositionChar))
                     {
                         return fill(board, possibleRightCol, openPositionChar);
-                        //board.fillGrid(i, possibleRightCol, getcharacterOnBoard());
+                        //board.DropDisc(i, possibleRightCol, getcharacterOnBoard());
                     }
 
                     int possibleLeftCol = j - 3;
-                    if (possibleLeftCol >= 0  && board.isGridFilledWith(i, possibleLeftCol, openPositionChar))
+                    if (possibleLeftCol >= 0  && board.isCellFilledWith(i, possibleLeftCol, openPositionChar))
                     {
                         return fill(board, possibleLeftCol, openPositionChar);
-                        //board.fillGrid(i, possibleLeftCol, getcharacterOnBoard());
+                        //board.DropDisc(i, possibleLeftCol, getcharacterOnBoard());
                     }
                 }
             }
@@ -71,7 +71,7 @@ public class HardComputer extends ComputerPlayer
             int continuousMoveCount = 0;
             for (int i = 0; i < rowCount; i++)
             {
-                if (board.isGridFilledWith(i, j, opponentCharacterOnBoard))
+                if (board.isCellFilledWith(i, j, opponentCharacterOnBoard))
                 {
                     continuousMoveCount ++;
                 }
@@ -83,7 +83,7 @@ public class HardComputer extends ComputerPlayer
                 if (continuousMoveCount == 3)
                 {
                     int possibleRow = i - 3;
-                    if (possibleRow >=0 && board.isGridFilledWith(possibleRow, j, openPositionChar))
+                    if (possibleRow >=0 && board.isCellFilledWith(possibleRow, j, openPositionChar))
                     {
                         return fill(board, j, openPositionChar);
                     }
@@ -97,7 +97,7 @@ public class HardComputer extends ComputerPlayer
         {
             for (int i= rowCount -1; i>=0; i-- )
             {
-                if (board.isGridFilledWith(i, j, openPositionChar))
+                if (board.isCellFilledWith(i, j, openPositionChar))
                 {
                     return fill(board, j, openPositionChar);
 

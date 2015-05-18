@@ -81,7 +81,7 @@ public class ConnectFour
 
     public boolean validMove(int possibleCol)
     {
-        return board.validMove(possibleCol);
+        return board.IsDropValid(possibleCol);
     }
 
     public boolean humanHasWon()
@@ -97,7 +97,7 @@ public class ConnectFour
     public boolean tieGame()
     {
         boolean isTie = false;
-        boolean isBoardfilled = board.isBoardFilled();
+        boolean isBoardfilled = board.isBoardFullyFilled();
 
         if (isBoardfilled)
         {

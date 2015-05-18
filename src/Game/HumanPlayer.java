@@ -18,9 +18,9 @@ public class HumanPlayer extends BasePlayer
             int rowCount = board.getRowCount();
             for (i = rowCount - 1; i >= 0; i--)
             {
-                if (board.isGridFilledWith(i, col, openPositionChar))
+                if (board.isCellFilledWith(i, col, openPositionChar))
                 {
-                    board.fillGrid(i, col, getCharacterOnBoard());
+                    board.DropDisc(i, col, getCharacterOnBoard());
                     break;
                 }
             }
